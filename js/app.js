@@ -3,7 +3,9 @@ const inputBox = document.querySelector("form input");
 const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const body = document.querySelector("body");
-const h1 = document.querySelector("h1")
+const h1 = document.querySelector("h1");
+const mainImage = document.querySelector(".time");
+const icon = document.querySelector(".icon img")
 
 const updateUI = weatherInfo => {
 	const cityDetails = weatherInfo.actualCity;
@@ -18,13 +20,18 @@ const updateUI = weatherInfo => {
 		</div>
 	</div>
 `;
+	console.log(weatherData.WeatherIcon)
+	icon.src = `/img/icons/${weatherData.WeatherIcon}.svg`;
 
+	// Shows card once search is made for the weather
 	if (card.classList.contains("d-none")) {
 		card.classList.remove("d-none");
 	}
 
+
 	if (weatherData.IsDayTime==true) {
-		console.log("Changing weather to day");
+
+		mainImage.src = "./img/day.jpg";
 
 		body.classList.remove("night");
 		details.classList.remove("dark");
@@ -33,7 +40,8 @@ const updateUI = weatherInfo => {
 		h1.classList.remove("night");
 
 	} else {
-		console.log("Changing weather to day");
+
+		mainImage.src = "./img/night2.jpg";
 
 		body.classList.add("night")
 		details.classList.add("dark");

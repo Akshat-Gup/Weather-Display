@@ -1,5 +1,5 @@
 //Accuweather API code
-const key = "NGKbFaK4eFjbczC75WOM8L1WXGswGVGv";
+const key = "A2nCXIcaICM55tQoYyzVmeBIJaLu54cx";
 
 const getWeatherConditions = async (locationID) => {
 
@@ -19,7 +19,7 @@ const getCity = async (city) => {
 
 	const response = await fetch(baseResourceUrl + query);
 	const data = await response.json();
-	
+
 	return data[0];
 
 };
