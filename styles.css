@@ -2,8 +2,27 @@ body{
 	letter-spacing: 0.2em;
 	font-size: 0.8em;
 	background-color: white;
-  }
-  
+}
+
+.details {
+	background-color: white;
+}
+form input {
+	background-color: white;
+}
+
+h1 {
+	background-color: white;
+}
+.night {
+	background-color: black !important;
+	color: white !important;
+}
 .container{
 	max-width: 500px;
 }
+.dark {
+	background-color: rgb(65, 65, 65) !important ;
+	color: white !important ;
+}
+
